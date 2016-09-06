@@ -1,6 +1,6 @@
 package com.raza.ahmed.nomadapp.models;
 
-import retrofit2.Callback;
+import retrofit2.Call;
 import retrofit2.http.GET;
 
 /**
@@ -10,6 +10,6 @@ public interface NomadServices {
 
 
     @GET("/mumbai-india/places/work")
-    void getPlaceMumbai(Callback<CityResponse> callback);
+    Call<CityResponse> getPlaceMumbai();
 
 }
