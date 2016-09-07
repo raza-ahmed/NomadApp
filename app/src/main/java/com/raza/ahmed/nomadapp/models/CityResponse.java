@@ -5,14 +5,20 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ahmedraza on 06/09/16.
  */
 public class CityResponse {
 
-    public ArrayList<City> results;
+    @SerializedName("result")
+    private List<City> result;
+
+    public List<City> getResult(){
+        return result;
+    }
+
 
     public static class City implements Parcelable{
 

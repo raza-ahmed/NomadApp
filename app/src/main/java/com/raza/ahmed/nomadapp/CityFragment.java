@@ -44,7 +44,7 @@ public class CityFragment extends Fragment {
         call.enqueue(new Callback<CityResponse>() {
             @Override
             public void onResponse(Call<CityResponse> call, Response<CityResponse> response) {
-                List<CityResponse.City> city = response.body().results;
+                List<CityResponse.City> city = response.body().getResult();
                 Log.d(TAG, "Number of movies received: " + city.size());
             }
 
